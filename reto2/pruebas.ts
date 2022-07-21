@@ -8,3 +8,5 @@ let samnsgunggalaxy10 = new Mobile("samnsung","galaxy s10","nizorra",128,"white"
 let arrayObt =  new MobileLibrary([Nokia3210,Iphone3g,samnsgunggalaxy10],"libreria1", "Gijon",0)
 
 console.log(arrayObt.totalPriceCalculation());
+
+arrayObt.printLibrary()

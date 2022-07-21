@@ -15,11 +15,17 @@ var Mobile = /** @class */ (function () {
     Mobile.prototype.getName = function () {
         console.log(this.name);
     };
+    Mobile.prototype.getName2 = function () {
+        return this.name;
+    };
     Mobile.prototype.setName = function (string) {
         this.name = string;
     };
     Mobile.prototype.getModel = function () {
         console.log(this.model);
+    };
+    Mobile.prototype.getModel2 = function () {
+        return this.model;
     };
     Mobile.prototype.setModel = function (string) {
         this.model = string;
@@ -27,11 +33,17 @@ var Mobile = /** @class */ (function () {
     Mobile.prototype.getTrademark = function () {
         console.log(this.trademark);
     };
+    Mobile.prototype.getTrademark2 = function () {
+        return this.trademark;
+    };
     Mobile.prototype.setTrademark = function (string) {
         this.trademark = string;
     };
     Mobile.prototype.getSdsize = function () {
         console.log(this.sdSize);
+    };
+    Mobile.prototype.getSdsize2 = function () {
+        return this.sdSize;
     };
     Mobile.prototype.setSdsize = function (number) {
         this.sdSize = number;
@@ -39,11 +51,17 @@ var Mobile = /** @class */ (function () {
     Mobile.prototype.getColor = function () {
         console.log(this.color);
     };
+    Mobile.prototype.getColor2 = function () {
+        return this.color;
+    };
     Mobile.prototype.setColor = function (string) {
         this.color = string;
     };
     Mobile.prototype.getIs5g = function () {
         console.log(this.is5G);
+    };
+    Mobile.prototype.getIs5G2 = function () {
+        return this.is5G;
     };
     Mobile.prototype.setIs5g = function (boolean) {
         this.is5G = boolean;
@@ -51,11 +69,14 @@ var Mobile = /** @class */ (function () {
     Mobile.prototype.getNumberOfCameras = function () {
         console.log(this.numberOfCameras);
     };
+    Mobile.prototype.getNumberOfCameras2 = function () {
+        return this.numberOfCameras;
+    };
     Mobile.prototype.setNumberOfCameras = function (number) {
         this.numberOfCameras = number;
     };
     Mobile.prototype.getPrice = function () {
-        return this.price;
+        console.log(this.price);
     };
     Mobile.prototype.getPrice2 = function () {
         return this.price;
@@ -75,7 +96,7 @@ var MobileLibrary = /** @class */ (function () {
         this.mobiles = mobiles;
         this.name = name;
         this.location = location;
-        this.totalPrice = totalPrice;
+        this.totalPrice = this.totalPriceCalculation();
     }
     MobileLibrary.prototype.getName = function () {
         console.log(this.name);
@@ -102,10 +123,10 @@ var MobileLibrary = /** @class */ (function () {
         }
         return totalPrice;
     };
-    MobileLibrary.prototype.printAll = function () {
-        console.log("The characteristics of the mobiles are:");
+    MobileLibrary.prototype.printLibrary = function () {
         for (var x = 0; x < this.mobiles.length; x++) {
-            console.log(this.mobiles[x]);
+            console.log("The characteristics of the mobile " + this.mobiles[x].getName2() + " are:");
+            console.log(" Name  :  ".concat(this.mobiles[x].getName2(), " "));
         }
     };
     return MobileLibrary;

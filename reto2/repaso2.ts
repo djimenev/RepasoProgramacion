@@ -22,11 +22,17 @@ export class Mobile{
             public getName():void{
                 console.log(this.name);
                 }
+            public getName2():string{
+                return this.name
+            }        
             public setName(string:string):void{
                 this.name = string;
             }
             public getModel():void{
                 console.log(this.model);
+            }
+            public getModel2():string{
+                return this.model
             }
             public setModel(string:string):void{
                 this.model = string;
@@ -34,11 +40,17 @@ export class Mobile{
             public getTrademark():void{
                 console.log(this.trademark);
             }
+            public getTrademark2():string{
+                return this.trademark
+            }
             public setTrademark(string:string):void{
                 this.trademark = string;
             }
             public getSdsize():void{
                 console.log(this.sdSize);
+            }
+            public getSdsize2():number{
+                return this.sdSize
             }
             public setSdsize(number:number):void{
                 this.sdSize = number;
@@ -46,11 +58,17 @@ export class Mobile{
             public getColor():void{
                 console.log(this.color);
             }
+            public getColor2():string{
+                return this.color
+            }
             public setColor(string:string):void{
                 this.color = string;
             }
             public getIs5g():void{
                 console.log(this.is5G);
+            }
+            public getIs5G2():boolean{
+                return this.is5G
             }
             public setIs5g(boolean:boolean):void{
                 this.is5G = boolean;
@@ -58,11 +76,15 @@ export class Mobile{
             public getNumberOfCameras():void{
                 console.log(this.numberOfCameras);
             }
+            public getNumberOfCameras2():number{
+                return this.numberOfCameras
+            }
             public setNumberOfCameras(number:number):void{
                 this.numberOfCameras = number;
             }
-            public getPrice():number{
-                return this.price
+            public getPrice():void{
+                console.log(this.price);
+                
             }
             public getPrice2():number{
                 return this.price
@@ -87,14 +109,16 @@ export class Mobile{
             private mobiles:Mobile[];
             private name:string;
             private location:string;
-            private totalPrice:number            
+            private totalPrice:number         
+
 
 
             constructor(mobiles:Mobile[],name:string,location:string,totalPrice:number){
                 this.mobiles = mobiles
                 this.name = name
                 this.location = location
-                this.totalPrice = totalPrice
+                this.totalPrice = this.totalPriceCalculation()
+                
             }
 
             public getName():void{
@@ -124,16 +148,22 @@ export class Mobile{
             }
 
 
-            public printAll():void{
-                console.log("The characteristics of the mobiles are:");
+            public printLibrary():void{
                 
-                for(let x = 0; x<this.mobiles.length;x++){
-                    console.log(this.mobiles[x]);
+                for(let x=0;x<this.mobiles.length;x++){
+                console.log("The characteristics of the mobile " + this.mobiles[x].getName2() + " are:");
+                console.log(` Name  :  ${this.mobiles[x].getName2()} `);
+                
+                }
+                
+                    
+                                
+            }
                     
                 }
                 
                 
                     
                                 
-            }
-        }
+            
+        
