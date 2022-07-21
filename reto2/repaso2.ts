@@ -61,8 +61,11 @@ export class Mobile{
             public setNumberOfCameras(number:number):void{
                 this.numberOfCameras = number;
             }
-            public getPrice():void{
-                console.log(this.price);
+            public getPrice():number{
+                return this.price
+            }
+            public getPrice2():number{
+                return this.price
             }
             public setPrice(number:number):void{
                 this.price = number;
@@ -79,13 +82,47 @@ export class Mobile{
         }           
 
 
-        export class LibreriaMobiles{
+        export class MobileLibrary{
 
-            public mobiles:Mobile[];
+            private mobiles:Mobile[];
+            private name:string;
+            private location:string;
+            private totalPrice:number            
 
-            constructor(mobiles:Mobile[]){
+
+            constructor(mobiles:Mobile[],name:string,location:string,totalPrice:number){
                 this.mobiles = mobiles
+                this.name = name
+                this.location = location
+                this.totalPrice = totalPrice
             }
+
+            public getName():void{
+                console.log(this.name);
+            }
+            public setName(name:string):void{
+                this.name = name;
+            }
+            public getLocation():void{
+                console.log(this.location);
+            }
+            public setLocation(location:string):void{
+                this.location = location;
+            }
+            public getMobiles():void{
+                console.log(this.mobiles);
+            }
+            public setMobiles(mobiles:Mobile[]){
+                this.mobiles = mobiles;
+            }
+            public totalPriceCalculation():number{
+                let totalPrice = 0
+                for(let x = 0;x<this.mobiles.length;x++){
+                 totalPrice= totalPrice + this.mobiles[x].getPrice2()
+                }
+                return totalPrice
+            }
+
 
             public printAll():void{
                 console.log("The characteristics of the mobiles are:");
