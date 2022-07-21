@@ -152,11 +152,12 @@ export class Mobile{
                 
                 for(let x=0;x<this.mobiles.length;x++){
                 console.log("The characteristics of the mobile " + this.mobiles[x].getName2() + " are:");
-                console.log(` Name  :  ${this.mobiles[x].getName2()} `);
+                console.log(`Name : ${this.mobiles[x].getName2()} \nModel : ${this.mobiles[x].getModel2()} \nTrademark : ${this.mobiles[x].getTrademark2()} \nSD Size (GB) : ${this.mobiles[x].getSdsize2()} \nColor : ${this.mobiles[x].getColor2()} \nIS 5g? : ${this.mobiles[x].getIs5G2()} \nNumber of camerass : ${this.mobiles[x].getNumberOfCameras2()}`);
                 
                 }
                 
-                    
+                console.log(`Price Overall: ${this.totalPrice}`);
+                   
                                 
             }
                     

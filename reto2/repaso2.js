@@ -126,8 +126,9 @@ var MobileLibrary = /** @class */ (function () {
     MobileLibrary.prototype.printLibrary = function () {
         for (var x = 0; x < this.mobiles.length; x++) {
             console.log("The characteristics of the mobile " + this.mobiles[x].getName2() + " are:");
-            console.log(" Name  :  ".concat(this.mobiles[x].getName2(), " "));
+            console.log("Name : ".concat(this.mobiles[x].getName2(), " \nModel : ").concat(this.mobiles[x].getModel2(), " \nTrademark : ").concat(this.mobiles[x].getTrademark2(), " \nSD Size (GB) : ").concat(this.mobiles[x].getSdsize2(), " \nColor : ").concat(this.mobiles[x].getColor2(), " \nIS 5g? : ").concat(this.mobiles[x].getIs5G2(), " \nNumber of camerass : ").concat(this.mobiles[x].getNumberOfCameras2()));
         }
+        console.log("Price Overall: ".concat(this.totalPrice));
     };
     return MobileLibrary;
 }());
